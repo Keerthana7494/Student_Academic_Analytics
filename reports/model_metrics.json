@@ -1,0 +1,199 @@
+{
+  "regression": {
+    "target": "Academic_Performance_Score",
+    "task": "regression",
+    "selected_model": "Random Forest",
+    "selection_metric": "neg_mean_absolute_error",
+    "cv_mean": -7.8255397804746645,
+    "train_rows": 12000,
+    "test_rows": 3000,
+    "features": [
+      "Age",
+      "Daily_Social_Media_Hours",
+      "Daily_AI_Tool_Usage_Hours",
+      "Sleep_Hours",
+      "Physical_Activity_Hours",
+      "Mental_Health_Score",
+      "Physical_Health_Score",
+      "Social_Isolation_Score",
+      "Gender",
+      "Education_Level"
+    ],
+    "test_metrics": {
+      "MAE": 7.912021532211215,
+      "RMSE": 9.767789446416266,
+      "R2": 0.28453455747704814
+    }
+  },
+  "binary": {
+    "target": "Academic_Failure_Risk",
+    "task": "binary",
+    "selected_model": "Random Forest",
+    "selection_metric": "f1",
+    "cv_mean": 0.514959408186287,
+    "train_rows": 12000,
+    "test_rows": 3000,
+    "features": [
+      "Age",
+      "Daily_Social_Media_Hours",
+      "Daily_AI_Tool_Usage_Hours",
+      "Sleep_Hours",
+      "Physical_Activity_Hours",
+      "Mental_Health_Score",
+      "Physical_Health_Score",
+      "Social_Isolation_Score",
+      "Gender",
+      "Education_Level"
+    ],
+    "test_metrics": {
+      "Accuracy": 0.9343333333333333,
+      "Balanced_Accuracy": 0.777836879432624,
+      "Precision_Macro": 0.7187491759873804,
+      "Recall_Macro": 0.777836879432624,
+      "F1_Macro": 0.7438709976593016,
+      "F1_Weighted": 0.9382353448488817,
+      "Labels": [
+        "0",
+        "1"
+      ],
+      "Confusion_Matrix": [
+        [
+          2695,
+          125
+        ],
+        [
+          72,
+          108
+        ]
+      ],
+      "Classification_Report": {
+        "0": {
+          "precision": 0.9739790386700398,
+          "recall": 0.9556737588652482,
+          "f1-score": 0.9647395740110972,
+          "support": 2820.0
+        },
+        "1": {
+          "precision": 0.463519313304721,
+          "recall": 0.6,
+          "f1-score": 0.5230024213075061,
+          "support": 180.0
+        },
+        "accuracy": 0.9343333333333333,
+        "macro avg": {
+          "precision": 0.7187491759873804,
+          "recall": 0.777836879432624,
+          "f1-score": 0.7438709976593016,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 0.9433514551481206,
+          "recall": 0.9343333333333333,
+          "f1-score": 0.9382353448488817,
+          "support": 3000.0
+        }
+      },
+      "PR_AUC_Average_Precision": 0.5240479249889834
+    }
+  },
+  "multiclass": {
+    "target": "Burnout_Level",
+    "task": "multiclass",
+    "selected_model": "Random Forest",
+    "selection_metric": "f1_macro",
+    "cv_mean": 0.5084659576621152,
+    "train_rows": 12000,
+    "test_rows": 3000,
+    "features": [
+      "Age",
+      "Daily_Social_Media_Hours",
+      "Daily_AI_Tool_Usage_Hours",
+      "Sleep_Hours",
+      "Physical_Activity_Hours",
+      "Mental_Health_Score",
+      "Physical_Health_Score",
+      "Social_Isolation_Score",
+      "Gender",
+      "Education_Level"
+    ],
+    "test_metrics": {
+      "Accuracy": 0.6536666666666666,
+      "Balanced_Accuracy": 0.5099801587301587,
+      "Precision_Macro": 0.5017416715300178,
+      "Recall_Macro": 0.5099801587301587,
+      "F1_Macro": 0.5048144148006057,
+      "F1_Weighted": 0.6617291635013073,
+      "Labels": [
+        "High",
+        "Low",
+        "Moderate",
+        "Severe"
+      ],
+      "Confusion_Matrix": [
+        [
+          102,
+          11,
+          126,
+          31
+        ],
+        [
+          33,
+          1399,
+          365,
+          3
+        ],
+        [
+          136,
+          257,
+          426,
+          21
+        ],
+        [
+          38,
+          0,
+          18,
+          34
+        ]
+      ],
+      "Classification_Report": {
+        "High": {
+          "precision": 0.3300970873786408,
+          "recall": 0.37777777777777777,
+          "f1-score": 0.35233160621761656,
+          "support": 270.0
+        },
+        "Low": {
+          "precision": 0.8392321535692862,
+          "recall": 0.7772222222222223,
+          "f1-score": 0.8070377848283818,
+          "support": 1800.0
+        },
+        "Moderate": {
+          "precision": 0.4556149732620321,
+          "recall": 0.5071428571428571,
+          "f1-score": 0.48,
+          "support": 840.0
+        },
+        "Severe": {
+          "precision": 0.38202247191011235,
+          "recall": 0.37777777777777777,
+          "f1-score": 0.37988826815642457,
+          "support": 90.0
+        },
+        "accuracy": 0.6536666666666666,
+        "macro avg": {
+          "precision": 0.5017416715300178,
+          "recall": 0.5099801587301587,
+          "f1-score": 0.5048144148006057,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 0.6722808966763217,
+          "recall": 0.6536666666666666,
+          "f1-score": 0.6617291635013073,
+          "support": 3000.0
+        }
+      }
+    }
+  }
+}

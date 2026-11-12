@@ -1,0 +1,28 @@
+target,check,feature,value,interpretation
+Academic_Performance_Score,Spearman correlation,Age,-0.007637564487445041,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Daily_Social_Media_Hours,-0.38038234411689403,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Daily_AI_Tool_Usage_Hours,-0.19664048707575252,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Sleep_Hours,0.28640807587362827,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Physical_Activity_Hours,0.03601894250281832,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Mental_Health_Score,0.19953375258833508,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Physical_Health_Score,0.14415455140487088,Association only; investigate target definition
+Academic_Performance_Score,Spearman correlation,Social_Isolation_Score,-0.22327225447128668,Association only; investigate target definition
+Academic_Performance_Score,Depth-3 decision-tree CV reconstruction,ALL_INPUT_FEATURES,0.253297393115527,"CV r2; high score warrants investigation, not proof of leakage"
+Academic_Failure_Risk,Difference in class means,Age,0.16832151300236475,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Daily_Social_Media_Hours,3.3286406619385334,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Daily_AI_Tool_Usage_Hours,0.9838037825059103,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Sleep_Hours,1.273729078014184,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Physical_Activity_Hours,0.5994548463356975,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Mental_Health_Score,13.859078486997646,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Physical_Health_Score,7.411884869976362,Class separation only; not proof of leakage
+Academic_Failure_Risk,Difference in class means,Social_Isolation_Score,1.129498108747045,Class separation only; not proof of leakage
+Academic_Failure_Risk,Depth-3 decision-tree CV reconstruction,ALL_INPUT_FEATURES,0.334695543356136,"CV f1; high score warrants investigation, not proof of leakage"
+Burnout_Level,Difference in class means,Age,0.3533333333333353,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Daily_Social_Media_Hours,4.5925955555555555,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Daily_AI_Tool_Usage_Hours,1.0396066666666668,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Sleep_Hours,1.673432222222222,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Physical_Activity_Hours,0.9102166666666667,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Mental_Health_Score,17.39161111111111,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Physical_Health_Score,10.58874333333334,Class separation only; not proof of leakage
+Burnout_Level,Difference in class means,Social_Isolation_Score,1.4996455555555555,Class separation only; not proof of leakage
+Burnout_Level,Depth-3 decision-tree CV reconstruction,ALL_INPUT_FEATURES,0.43633211802206767,"CV f1_macro; high score warrants investigation, not proof of leakage"

@@ -1,0 +1,15 @@
+column,data_type,missing_count,unique_values
+Student_ID,str,0,15000
+Age,int64,0,13
+Gender,str,0,3
+Education_Level,str,0,3
+Daily_Social_Media_Hours,float64,0,1106
+Daily_AI_Tool_Usage_Hours,float64,0,762
+Sleep_Hours,float64,0,752
+Physical_Activity_Hours,float64,0,462
+Mental_Health_Score,float64,0,3743
+Physical_Health_Score,float64,0,3433
+Social_Isolation_Score,float64,0,645
+Burnout_Level,str,0,4
+Academic_Performance_Score,float64,0,4471
+Academic_Failure_Risk,int64,0,2
