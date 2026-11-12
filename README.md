@@ -1,95 +1,204 @@
-# Student Health & Academic Performance Prediction
+# Student Health & Academic Performance Prediction System
 
-A beginner-friendly machine learning project using a Kaggle student-health dataset.
+A Machine Learning-based application that analyzes student-related factors and predicts academic performance, academic failure risk, and burnout levels.
 
-## What the application predicts
+## Project Overview
 
-1. **Academic Performance Score** – regression.
-2. **Academic Failure Risk** – binary classification (0 = No Risk, 1 = Risk).
-3. **Burnout Level** – multiclass classification (Low, Moderate, High, Severe).
+This project uses Machine Learning techniques to identify patterns in student data and generate predictions that can support early identification of academic and well-being concerns.
 
-## Six ML concepts demonstrated
+The system implements three predictive models:
 
-1. Data loading and exploratory data analysis (EDA).
-2. Data preprocessing: missing-value imputation, one-hot encoding and scaling.
-3. Feature and target selection.
-4. Train-test split and cross-validation.
-5. Model training and model comparison.
-6. Model evaluation and a basic target-leakage screening.
+- **Academic Performance Prediction:** Predicts students' academic performance scores.
+- **Academic Failure Risk Prediction:** Classifies students based on their academic failure risk.
+- **Burnout Level Prediction:** Identifies students' burnout levels.
 
-## Project structure
+A Streamlit web application provides an interface for entering student information and viewing prediction results.
+
+## Key Features
+
+- Exploratory Data Analysis (EDA)
+- Data preprocessing and feature engineering
+- Missing-value and data quality analysis
+- Correlation analysis and visualization
+- Multiple ML model comparison
+- Model training and evaluation
+- Regression, binary classification and multiclass classification
+- Prediction through a Streamlit interface
+- Trained model persistence using Joblib
+
+## Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Programming Language | Python |
+| Data Processing | Pandas, NumPy |
+| Data Visualization | Matplotlib, Seaborn |
+| Machine Learning | Scikit-learn |
+| Web Application | Streamlit |
+| Model Persistence | Joblib |
+
+## Dataset
+
+- **Total Records:** 15,000
+- **Input Features:** 10
+- **Prediction Targets:** 3
+
+The dataset contains student-related information used to analyze academic performance, academic failure risk and burnout.
+
+## Machine Learning Models
+
+Three independent ML models are developed for different prediction tasks.
+
+| Prediction Task | ML Approach | Selected Algorithm |
+|---|---|---|
+| Academic Performance Score | Regression | Random Forest Regressor |
+| Academic Failure Risk | Binary Classification | Random Forest Classifier |
+| Burnout Level | Multiclass Classification | Random Forest Classifier |
+
+Multiple candidate algorithms are evaluated and compared before selecting the final models.
+
+## Machine Learning Workflow
+
+1. Data Collection and Loading
+2. Data Validation and Quality Checks
+3. Exploratory Data Analysis (EDA)
+4. Missing Value Analysis
+5. Descriptive Statistical Analysis
+6. Correlation Analysis
+7. Feature and Target Selection
+8. Data Preprocessing
+9. Feature Encoding and Scaling
+10. Train-Test Split (80:20)
+11. Cross-Validation (3-Fold)
+12. Model Comparison and Selection
+13. Model Training
+14. Model Evaluation
+15. Model Saving using Joblib
+16. Prediction through Streamlit
+
+## Model Evaluation
+
+The trained models are evaluated using appropriate performance metrics.
+
+| Prediction Task | Evaluation Metric | Test Result |
+|---|---|---:|
+| Academic Performance | R² Score | 0.285 |
+| Academic Failure Risk | Accuracy | 93.43% |
+| Academic Failure Risk | F1-Score (Risk Class) | 0.523 |
+| Burnout Level | Accuracy | 65.37% |
+| Burnout Level | Macro F1-Score | 0.505 |
+
+**Note:** Accuracy alone does not represent overall model performance, particularly when the target classes are imbalanced. Therefore, F1-score and other classification metrics are also considered.
+
+## Project Structure
 
 ```text
 student_health_ml_project/
+│
 ├── app.py
 ├── train.py
 ├── requirements.txt
 ├── README.md
-├── data/
-│   └── raw/
-│       └── student_health.csv
+│
 ├── src/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── data_utils.py
 │   ├── modeling.py
 │   └── reporting.py
+│
+├── data/
+│   └── raw/
+│       └── student_health.csv
+│
 ├── artifacts/
-│   └── models/             # Saved models after training
+│   └── models/
+│       ├── regression_model.joblib
+│       ├── binary_model.joblib
+│       └── multiclass_model.joblib
+│
 └── reports/
-    ├── figures/            # Charts created during training
     ├── dataset_summary.csv
+    ├── descriptive_statistics.csv
     ├── missing_values.csv
-    ├── target_distributions.csv
-    ├── numeric_correlations.csv
-    ├── leakage_screen.csv
     ├── model_comparison.csv
     ├── model_metrics.json
-    └── final_summary.txt
+    ├── final_summary.txt
+    └── figures/
 ```
 
-## Run on Windows (VS Code)
+## Installation and Setup
 
-### 1. Open the project folder
-
-Open `student_health_ml_project` in VS Code.
-
-### 2. Create and activate a virtual environment
+### 1. Clone the Repository
 
 ```bash
-python -m venv .venv
-.venv\\Scripts\\activate
+git clone <your-github-repository-url>
 ```
 
-### 3. Install packages
+### 2. Navigate to the Project Directory
+
+```bash
+cd student_health_ml_project
+```
+
+### 3. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 4. Activate the Virtual Environment
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### 5. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Start the Streamlit application
+## Running the Project
 
-```bash
-streamlit run app.py
-```
-
-The app opens in your browser. Use the **Train Models** page/button to train the three models and generate reports.
-
-You can also train from the terminal:
+### Step 1: Train the Models
 
 ```bash
 python train.py
 ```
 
-## Reports
+This executes the training workflow and generates the trained model artifacts.
 
-The `reports/` folder is populated when model training runs. The Streamlit app also lets you preview and download the generated reports.
+### Step 2: Launch the Streamlit Application
 
-## Important data-quality note
+```bash
+streamlit run app.py
+```
 
-The target-generation methodology of the original Kaggle dataset has not yet been independently verified. The leakage screen checks statistical relationships and whether shallow decision trees can reconstruct target labels from the selected input features. These checks can identify warning signs, but they cannot prove how the Kaggle author created the labels.
+The application will open in your browser.
 
-Do not describe model performance on this dataset as proof of real-world student-health prediction. First verify whether the dataset contains measured observations or synthetic/simulated records.
+## Future Enhancements
 
-## Interview explanation
+- Improve model performance through hyperparameter tuning.
+- Address class imbalance to improve minority-class predictions.
+- Add explainable AI techniques for prediction interpretation.
+- Enhance the user interface and prediction visualizations.
+- Integrate the application with a database for student record management.
 
-"I built a three-task machine learning application. I first explored and validated the dataset, then separated input features from three target variables. I used Scikit-learn pipelines so preprocessing is learned from training data only. I compared a simple baseline with a machine learning model using cross-validation, evaluated the selected model on a held-out test set, and generated reports. Streamlit provides a simple interface for training, prediction and report viewing."
+## Disclaimer
+
+This project is developed for educational and analytical purposes. Predictions should not be treated as medical diagnoses or definitive assessments of a student's mental health or academic future.
+
+## Author
+
+**Keerthana D**
+
+Machine Learning | Python | Data Analytics | AI
