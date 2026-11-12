@@ -197,6 +197,15 @@ The application will open in your browser.
 
 This project is developed for educational and analytical purposes. Predictions should not be treated as medical diagnoses or definitive assessments of a student's mental health or academic future.
 
+## Application Screenshots
+
+### Model Comparison
+![Model Comparison](Screenshots/model_comparison.png)
+
+### Prediction Results
+![Prediction Results](Screenshots/prediction_result.png)
+
+
 ## Author
 
 **Keerthana D**
